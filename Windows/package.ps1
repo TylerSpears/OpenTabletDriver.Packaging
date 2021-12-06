@@ -30,7 +30,7 @@ function clone_repo($repo) {
 }
 
 # Build arguments
-$framework = @('net6', 'net6-windows')
+$framework = @('net6.0', 'net6.0-windows')
 $runtime = "win-x64"
 $projects = @('OpenTabletDriver.Daemon', 'OpenTabletDriver.UX.Wpf')
 
