@@ -44,7 +44,7 @@ package() {
   clean_debug "${OUT_DIR}"
 
   print "Copying MacOS assets..."
-  cp -v "${SRC_DIR}/OpenTabletDriver.UX.MacOS/Icon.icons" "${PKG_ICONS_FILE}"
+  cp -v "${SRC_DIR}/OpenTabletDriver.UX.MacOS/Icon.icns" "${PKG_ICONS_FILE}"
 
   create_tarball "${PKG_DIR}" "${PKG_TARBALL_FILE}"
 
