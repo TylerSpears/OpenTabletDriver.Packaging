@@ -90,7 +90,7 @@ update_size() {
 }
 
 update_version() {
-  PKG_VERSION=$(get_group "$(cat ${SRC_DIR}/Directory.Build.props)" '<VersionPrefix>(.+?)<\/VersionPrefix>' 1)
+  PKG_VERSION=$(get_group "$(cat ${SRC_DIR}/Directory.Build.props)" '<VersionBase>(.+?)<\/VersionBase>' 1)
 
   print "Updating version in DEBIAN/control"
   regex_edit "Version: .\+$" "Version: ${PKG_VERSION}" "${DEBIAN_DIR}/control"
