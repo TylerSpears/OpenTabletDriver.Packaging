@@ -77,9 +77,11 @@ copy_assets() {
 
   print "Copying assets to '${1}'..."
   mkdir -p "${1}"
+  set +e
   for file in "${SRC_DIR}/OpenTabletDriver.UX/Assets/*"; do
     [ -f "${file}" ] && cp -v "${file}" "${1}/$(basename ${file})"
   done
+  set -e
 }
 
 update_size() {
