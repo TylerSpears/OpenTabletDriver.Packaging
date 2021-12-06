@@ -84,7 +84,7 @@ copy_assets() {
 }
 
 update_version() {
-  PKG_VERSION=$(get_group "$(cat ${SRC_DIR}/OpenTabletDriver/OpenTabletDriver.csproj)" '<VersionPrefix>(.+?)<\/VersionPrefix>' 1)
+  PKG_VERSION=$(get_group "$(cat ${SRC_DIR}/Directory.Build.props)" '<VersionPrefix>(.+?)<\/VersionPrefix>' 1)
 
   print "Updating version in opentabletdriver.spec"
   regex_edit "Version: .\+$" "Version: ${PKG_VERSION}" "${SPEC_FILE}"
